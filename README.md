@@ -1,2 +1,0 @@
-# shoyaiwaname
-memo
