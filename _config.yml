@@ -31,6 +31,8 @@ google_analytics: UA-85165915-13
 # Build settings
 
 theme: minima
+minima:
+  skin: solarized
 # remote_theme: mmistakes/minimal-mistakes
 plugins:
   - jekyll-feed
