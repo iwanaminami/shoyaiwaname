@@ -33,10 +33,15 @@ google_analytics: UA-85165915-13
 theme: minima
 minima:
   skin: solarized
+  date_format: "%Y年%-m月%-d日"
 # remote_theme: mmistakes/minimal-mistakes
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-paginate
+
+paginate: 10
+paginate_path: "/postlist/page:num/"
 
 
 
