@@ -28,12 +28,12 @@ Googleフォームの回答が消えた状況を再現します。
 - 質問２：答え２−１、答え２−２、答え２−３
 - 質問３：答え３−１、答え３−２、答え３−３
 
-![](/assets/images/20191217/Googleform_form1.png)
+![Googleフォームの例](/assets/images/20191217/Googleform_form1.png)
 
 最初の「回答者名」は回答の順番がわかるように記述式の設問をしています。  
 まず３名分の回答を自分で入力しました。
 
-![](/assets/images/20191217/Googleform_answer1.png)
+![Googleフォームの回答の例](/assets/images/20191217/Googleform_answer1.png)
 
 回答者１、回答者２、回答者３が回答しました。質問１、質問２、質問３について３名分の回答があります。  
 ここで、質問３が適切ではなかったため、質問３を削除し、新たに３択問題の質問４を作成しました。
@@ -42,11 +42,11 @@ Googleフォームの回答が消えた状況を再現します。
 - 質問２：答え２−１、答え２−２、答え２−３
 - 質問４：答え４−１、答え４−２、答え４−３
 
-![](/assets/images/20191217/Googleform_form2.png)
+![Googleフォームで回答を削除した例](/assets/images/20191217/Googleform_form2.png)
 
 このあと新たに回答者４と回答者５が回答しました。
 
-![](/assets/images/20191217/Googleform_answer2.png)
+![Googleフォームの新しい質問に回答](/assets/images/20191217/Googleform_answer2.png)
 
 すると、Googleフォームの回答のページでは設問が新しく更新されて、質問１、質問２、質問４の回答のみが表示されました。質問１と質問２には５名分（回答者１、回答者２、回答者３、回答者４と回答者５）の回答があり、質問４（回答者４と回答者５）には２名分の回答があります。
 
@@ -58,13 +58,13 @@ Googleフォームの回答が消えた状況を再現します。
 
 質問３の消えた回答を取り戻したい場合は、Googleフォームの回答のページの右上の点が３つ並んだボタンから「回答をダウンロード（.csv）」を押して、CSV形式でこれまでの全ての回答をダウンロードすることで、取り戻すことができます。
 
-![](/assets/images/20191217/Googleform_button.png)
+![Googleフォームの回答をダウンロードのボタン](/assets/images/20191217/Googleform_button.png)
 
-![](/assets/images/20191217/Googleform_downloadanswer.png)
+![Googleフォームの回答をダウンロードのボタン](/assets/images/20191217/Googleform_downloadanswer.png)
 
 ダウンロードしたCSVファイルを表計算ソフトなど（テキストエディタでも可）で開くと、これまでの回答が全て記載されていることがわかります。Excelで文字化けしたのでNumbersで開きました。
 
-![](/assets/images/20191217/Googleform_CSV.png)
+![GoogleフォームのCSV出力の例](/assets/images/20191217/Googleform_CSV.png)
 
 現在存在する質問１、質問２、質問４については質問のタイトルが記載されていますが、質問３については回答のみが記載されています。回答を復元したいだけならこの方法で問題ないでしょう。
 
@@ -72,7 +72,7 @@ Googleフォームの回答が消えた状況を再現します。
 
 GoogleフォームにはGoogleスプレッドシートに回答を自動記録できる機能があります。最初からこれを設定していれば、質問を変えても全ての回答が記録され、回答が消えることはないので、Googleフォームを使う時には必須だと思います。（個別の回答を削除した場合でもスプレッドシートには残ります。）
 
-![](/assets/images/20191217/Googleform_spreadsheet.png)
+![Googleフォームの回答をスプレッドシートに出力した例](/assets/images/20191217/Googleform_spreadsheet.png)
 
 質問自体は復元できないので、Googleフォームを作成する前に、質問一覧と選択肢をメモしておくことも大事だと思います。
 

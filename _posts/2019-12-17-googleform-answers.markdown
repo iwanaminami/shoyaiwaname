@@ -9,7 +9,7 @@ categories:
 image: /assets/images/20191217/スライド1.png
 ---
 
-![](/assets/images/20191217/スライド1.png)
+![Googleフォーム回答の保存先](/assets/images/20191217/スライド1.png)
 
 Googleフォームで回答を消してしまったときの復元方法を書きました。
 
