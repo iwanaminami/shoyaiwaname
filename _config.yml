@@ -43,6 +43,8 @@ plugins:
 paginate: 10
 paginate_path: "/postlist/page:num/"
 
+#timezone: Asia/Tokyo
+
 
 
 # Exclude from processing.
