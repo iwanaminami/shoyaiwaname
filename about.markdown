@@ -2,6 +2,7 @@
 layout: page
 title: iwana notebookについて
 permalink: /about/
+image: /assets/images/iwananotebook.png
 ---
 
 こんにちは

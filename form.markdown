@@ -3,6 +3,7 @@ layout: page
 title: お問い合わせフォーム
 permalink: /form/
 description: iwana notebookに関するお問い合わせフォームのページです。
+image: /assets/images/iwananotebook.png
 ---
 
 iwana notebookをご覧いただきありがとうございます。
