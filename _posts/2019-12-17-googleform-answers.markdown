@@ -6,10 +6,10 @@ date:   2019-12-17 02:32:24 +0900
 tags:
 - google form
 categories:
-image: /assets/images/20191217/スライド1.png
+image: /assets/images/20191217/googleform.png
 ---
 
-![Googleフォーム回答の保存先](/assets/images/20191217/スライド1.png)
+![Googleフォーム回答の保存先](/assets/images/20191217/googleform.png)
 
 Googleフォームで回答を消してしまったときの復元方法を書きました。
 
