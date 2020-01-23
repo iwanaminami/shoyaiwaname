@@ -5,7 +5,7 @@ description: Adobe Creative Cloud 12ヶ月版メンバーシップ 学生・教�
 date:   2020-01-07 19:00:00 +0900
 last_modified_at: 2020-01-08 00:50:00 +0900
 tags:
-- google form
+- adobe
 categories:
 image: /assets/images/iwananotebook.png
 ---

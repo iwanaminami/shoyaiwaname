@@ -27,3 +27,9 @@ Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most ou
 [jekyll-docs]: https://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
+
+looping
+
+[Looping in Liquid \| CloudCannon Academy](https://learn.cloudcannon.com/jekyll/looping-in-liquid/)
+
+[The forloop object · Shopify Help Center](https://help.shopify.com/en/themes/liquid/objects/for-loops)

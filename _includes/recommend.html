@@ -1,0 +1,8 @@
+<div class="">
+  <h2>Recommended</h2>
+  {% assign loop = site.tags.googleform %}
+  {% for post in loop limit:3 %}
+  <h3>{{ forloop.index }}. <a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+  <p>{{ post.description }}</p>
+  {% endfor %}
+</div>

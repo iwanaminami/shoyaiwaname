@@ -4,7 +4,7 @@ title:  "Googleフォームの回答の保存先はどこ？回答を削除し�
 description: 大切なアンケートの回答を消してしまわないようにGoogleフォームの回答の保存先の挙動をまとめました。
 date:   2019-12-17 02:32:24 +0900
 tags:
-- google form
+- googleform
 categories:
 image: /assets/images/20191217/googleform.png
 ---
