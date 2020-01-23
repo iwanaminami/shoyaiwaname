@@ -29,6 +29,10 @@ layout: default
 
   {% include postnp.html %}
 
+  {% if page.tags %}
+    {% include related.html %}
+  {% endif %}
+
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
   {%- endif -%}

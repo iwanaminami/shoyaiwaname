@@ -1,0 +1,12 @@
+<div class="">
+  <h2>Related articles</h2>
+  {% for tag in page.tags %}
+  {% assign loop = site.tags.[tag] %}
+  {% for post in loop limit:3 %}
+  {% if post != page %}
+  <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a> - Tag: {{ tag }}</h3>
+  <p>{{ post.description }}</p>
+  {% endif %}
+  {% endfor %}
+  {% endfor %}
+</div>
