@@ -85,3 +85,37 @@ hr{
     max-width: 1000px;
   }
 }
+
+.post-wrapper{
+  float: left;
+  width: 80%;
+}
+.side-wrapper{
+  display: block;
+  float: left;
+  width: 20%;
+}
+@media (max-width: 800px) {
+  .post-wrapper{
+    float: none;
+    width: 100%;
+  }
+  .side-wrapper{
+    display: none;
+  }
+}
+
+.side-inner{
+  padding: 0 20px;
+}
+
+
+
+
+
+
+.clearfix-o::after {
+  content: "";
+  display: block;
+  clear: both;
+}

@@ -1,56 +1,64 @@
 ---
 layout: default
 ---
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      Posted:
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-      {% if page.last_modified_at %}
-      | Updated:
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.last_modified_at | date: date_format }}
-      </time>
+<div class="post-wrapper">
+  <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <header class="post-header">
+      <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+      <p class="post-meta">
+        Posted:
+        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          {{ page.date | date: date_format }}
+        </time>
+        {% if page.last_modified_at %}
+        | Updated:
+        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          {{ page.last_modified_at | date: date_format }}
+        </time>
+        {% endif %}
+        {%- if page.author -%}
+          • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author | escape }}</span></span>
+        {%- endif -%}</p>
+    </header>
+
+    <div class="post-content e-content" itemprop="articleBody">
+      {{ content }}
+    </div>
+
+    {% if page.tags %}
+    <div class="">
+      <p>Tags:
+      {% for tag in page.tags %}
+      {% if forloop.last != true %}
+      <i><a href="/tags/#{{ tag }}">{{ tag }}</a></i>,
+      {% else %}
+      <i><a href="/tags/#{{ tag }}">{{ tag }}</a></i>
       {% endif %}
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author | escape }}</span></span>
-      {%- endif -%}</p>
-  </header>
-
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
-  </div>
-
-  {% if page.tags %}
-  <div class="">
-    <p>Tags:
-    {% for tag in page.tags %}
-    {% if forloop.last != true %}
-    <i><a href="/tags/#{{ tag }}">{{ tag }}</a></i>,
-    {% else %}
-    <i><a href="/tags/#{{ tag }}">{{ tag }}</a></i>
+      {% endfor %}
+      </p>
+    </div>
     {% endif %}
-    {% endfor %}
-    </p>
+
+    {%- if site.disqus.shortname -%}
+      {%- include disqus_comments.html -%}
+    {%- endif -%}
+
+    <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+  </article>
+  <div class="">
+    {% include postnp.html %}
+
+    {% if page.tags %}
+      {% include related.html %}
+    {% endif %}
   </div>
-  {% endif %}
-
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
-
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-</article>
-<div class="">
-  {% include postnp.html %}
-
-  {% if page.tags %}
-    {% include related.html %}
-  {% endif %}
+</div>
+<div class="side-wrapper">
+  <div class="side-inner">
+    {% include side.html %}
+  </div>
 </div>
