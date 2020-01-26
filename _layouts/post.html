@@ -41,15 +41,16 @@ layout: default
   </div>
   {% endif %}
 
-  {% include postnp.html %}
-
-  {% if page.tags %}
-    {% include related.html %}
-  {% endif %}
-
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
   {%- endif -%}
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
+<div class="">
+  {% include postnp.html %}
+
+  {% if page.tags %}
+    {% include related.html %}
+  {% endif %}
+</div>
