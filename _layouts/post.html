@@ -34,9 +34,9 @@ layout: default
       <p>Tags:
       {% for tag in page.tags %}
       {% if forloop.last != true %}
-      <i><a href="/tags/#{{ tag }}">{{ tag }}</a></i>,
+      <i><a href="/tags/#{{ tag }}">#{{ tag }}</a></i>,
       {% else %}
-      <i><a href="/tags/#{{ tag }}">{{ tag }}</a></i>
+      <i><a href="/tags/#{{ tag }}">#{{ tag }}</a></i>
       {% endif %}
       {% endfor %}
       </p>
