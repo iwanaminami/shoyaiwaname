@@ -89,12 +89,12 @@ hr{
 
 .post-wrapper{
   float: left;
-  width: 80%;
+  width: calc(100% - 300px);
 }
 .side-wrapper{
   display: block;
   float: left;
-  width: 20%;
+  width: 300px;
 }
 @media (max-width: 800px) {
   .post-wrapper{
