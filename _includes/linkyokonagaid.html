@@ -1,0 +1,4 @@
+{% assign spposts = site.posts | where:"id",include.url %}
+{% for sppost in spposts %}
+{% include linkyokonaga.html post = sppost %}
+{% endfor %}

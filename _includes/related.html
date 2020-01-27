@@ -9,13 +9,11 @@
   {% assign lim2 = 4 | minus:forloop.length %}
   {% endif %}
   {% if post != page %}
-  <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a> - <i><a href="/tags/#{{ tag }}">#{{ tag }}</a></i></h3>
-  <p>{{ post.description }}</p>
+  {% include linkyokonaga.html post = post %}
   {% endif %}
   {% endfor %}
   {% for post in site.posts limit:lim2 %}
-  <h3><a href="{{ post.url }}">{{ post.title }}</a> - 最新から</h3>
-  <p>{{ post.description }}</p>
+  {% include linkyokonaga.html post = post %}
   {% endfor %}
   {% endfor %}
 </div>
