@@ -19,9 +19,9 @@ image: /assets/images/20200127/ex.png
 ## EX予約、スマートEXとは？
 EX予約、スマートEXとは新幹線の東京-博多（JR東海+JR西日本）の間をお得に乗車できるサービスです。
 
-[EX予約](https://expy.jp/top.php?)
+{% include cardblank.html url = "https://expy.jp/top.php?" %}
 
-[スマートEX](https://smart-ex.jp/top.php)
+{% include cardblank.html url = "https://smart-ex.jp/top.php" %}
 
 
 新幹線のみを利用する場合に乗車券+特急券のチケット、または、特急券のみの値段がとてもお得になります。  
@@ -43,7 +43,7 @@ ICカードでの乗車の場合には、新幹線の車両番号や座席など
 
 EX予約、スマートEXで予約した場合、途中下車は可能ですが、それ以降の区間は放棄することになります。ICカードでの乗車でも切符を発券しての乗車でも途中下車は可能です。
 
-[ご利用ガイド（E予約専用）](https://expy.jp/reservation/pdf/jr-toukai_user_guide_e.pdf)
+{% include cardblank.html url = "https://expy.jp/reservation/pdf/jr-toukai_user_guide_e.pdf" title = "ご利用ガイド（E予約専用）" %}
 
 乗車前の改札通過以前もしくは切符の発券以前までは予約の変更が可能なので、予約区間を変更すれば問題ないのですが、往復予約の復路や乗車後に降車駅を変更したい場合には、途中下車することになります。
 
@@ -69,7 +69,7 @@ EX予約では途中乗車をするためには紙の切符を発券する必要
 
 EX予約の運賃は以下のサイトから検索できます。  
 
-[EX予約運賃ナビ](https://ex-ic.jp/navi/member/index.html)
+{% include cardblank.html url = "https://ex-ic.jp/navi/member/index.html" %}
 
 ※2019年12月17日現在
 
@@ -120,7 +120,7 @@ EX予約サービス（往復割引）では往復一括での変更は乗車前
 
 運賃の設定的に東京駅と品川駅は同じ駅のようで、東京駅発の予約では品川駅からICカードを利用しての途中乗車が可能です。
 
-[ご利用ガイド（E予約専用）](https://expy.jp/reservation/pdf/jr-toukai_user_guide_e.pdf)
+{% include cardblank.html url = "https://expy.jp/reservation/pdf/jr-toukai_user_guide_e.pdf" title = "ご利用ガイド（E予約専用）" %}
 
 ただし、品川駅発の予約では東京駅で乗車することができません。また、東京駅着の予約では品川駅で下車できますが、品川駅着の予約では東京駅で下車する場合追加の支払いが必要です。
 

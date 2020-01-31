@@ -1,0 +1,50 @@
+<div id="" class = "card-y">
+  <a href="{{ include.url }}">
+    <div class="">
+      {% assign tid = include.url | remove: "https://" | remove: "http://" | remove: "." | remove: "/" | remove: "-" | remove: "_" | remove: "?" | remove: "%" %}
+      <p class="{% unless include.title %}{{ tid }}title{% endunless %} card-y-title">{% if include.title %}{{ include.title }}{% endif %}</p>
+      <p class="{% unless include.title %}{{ tid }}description{% endunless %} card-y-description"></p>
+      <p class="{% unless include.title %}{{ tid }}host{% endunless %} card-y-description">{% if include.title %}{{ include.url }}{% endif %}</p>
+      <img src="https://www.google.com/s2/favicons?domain={{ include.url }}" alt="">
+    </div>
+  </a>
+</div>
+
+{% unless include.title %}
+<script type="text/javascript">
+  $(function(){
+    //alert("{{ tid }}");
+
+    const endpoint = "https://script.google.com/macros/s/AKfycbyQ0S4MJ19OPqL9YaRuX-EuciatGLf8n1PHxXU9JQ/exec";
+    $.ajax({
+        type: 'GET',
+        url: endpoint,
+        dataType: 'jsonp',
+        jsonpCallback: '{{ tid }}',
+        data: {
+            url: '{{ include.url }}',
+            id: '{{ tid }}',
+            jsonpcallback: '{{ tid }}'
+        },
+        success: function(out) {
+          if(out.title == ""){
+            $('.' + out.id + 'title').html('{{ include.url }}');
+          }else{
+            $('.' + out.id + 'title').html(out.title);
+          }
+          $('.' + out.id + 'description').html(out.description);
+          $('.' + out.id + 'host').html(out.host);
+          //$('.{{ tid }}title').html(out.title);
+          //$('.{{ tid }}description').html(out.description);
+          //$('.{{ tid }}host').html(out.host);
+          //console.log("{{ tid }}");
+          //alert(out.title);
+          //alert("{{ tid }}");
+        }
+    });
+    //console.log("{{ tid }}");
+  });
+  //alert(data);
+</script>
+
+{% endunless %}
