@@ -2,6 +2,7 @@
 body{
   background-color: #ffffff;
   font-family: YuGothic, Helvetica, sans-serif;
+  color: black;
 }
 
 p{
@@ -68,15 +69,31 @@ hr{
 
 .post h2{
   margin-top: 100px;
-  padding: 0 20px;
-  background-color: #f0f8ff;
+  margin-bottom: 30px;
+  padding: 0;
+  font-size: 24px;
+  /*background-color: #f0f8ff;
   border-bottom: solid 2px #4169e1;
-  border-top: solid 2px #eeeeee;
+  border-top: solid 2px #eeeeee;*/
+}
+
+.post h2:before {
+  content: '';
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  background-image: url(/assets/images/iwana.png);
+  background-size: contain;
+  vertical-align: middle;
+  background-position: left;
+  background-repeat: no-repeat;
 }
 
 .post h3 {
   margin-top: 80px;
+  margin-bottom: 30px;
   position: relative;
+  font-size: 20px;
 }
 
 .post h3:after {
