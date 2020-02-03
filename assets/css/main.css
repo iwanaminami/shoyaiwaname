@@ -89,6 +89,18 @@ hr{
   background-repeat: no-repeat;
 }
 
+.page-heading::before {
+  content: '';
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  background-image: url(/assets/images/iwana.png);
+  background-size: contain;
+  vertical-align: middle;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
 .post h3 {
   margin-top: 80px;
   margin-bottom: 30px;

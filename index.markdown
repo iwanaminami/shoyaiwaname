@@ -4,10 +4,8 @@
 
 layout: home
 image: /assets/images/iwananotebook.png
-title: IWANA notebookのトップページへようこそ
+title: IWANA notebook
 ---
 
 
-日々困ったこと調べたこと誰かの役に立ちそうなことを備忘録的に残していきます。
-
-お楽しみください。
+知識は浅く広く、実践から学ぶ。知のオープンアクセス化。
