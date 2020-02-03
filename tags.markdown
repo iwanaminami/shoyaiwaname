@@ -11,12 +11,12 @@ image: /assets/images/iwananotebook.png
 
 {% assign tag0 = tag[0] %}
 
-<h3 id = "{{ tag0 }}">【{{ tag0 }}】</h3>
+<h3 id = "{{ tag0 }}">#{{ tag0 }}</h3>
 
 {% assign loop = site.tags[tag0] %}
 
 {% for post in loop %}
-### [{{ post.title }}]({{ post.url | relative_url }})
+#### [{{ post.title }}]({{ post.url | relative_url }})
 
 {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
 <span class="date">{{ post.date | date: date_format }}</span>
