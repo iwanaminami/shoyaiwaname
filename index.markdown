@@ -4,9 +4,9 @@
 
 layout: home
 image: /assets/images/iwananotebook.png
+title: IWANA notebookのトップページへようこそ
 ---
 
-## iwana notebookのトップページへようこそ
 
 日々困ったこと調べたこと誰かの役に立ちそうなことを備忘録的に残していきます。
 
