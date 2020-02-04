@@ -31,6 +31,13 @@ hr{
   margin: 30px 0;
 }
 
+a{
+  color: #4169e1;
+}
+a:visited{
+  color: #4169e1;
+}
+
 .site-title{
   font-family: Avenir Next, YuGothic, sans-serif;
   font-weight: 200;
@@ -54,10 +61,11 @@ hr{
 }
 
 .post h1{
-  padding: 30px;
-  background-color: #4169e1;
+  font-size: 28px;
+  padding: 24px;
+  background-color: #4169e1cc;
   color: white;
-  border-radius: 10px;
+  text-align: justify;
 }
 
 @media (max-width: 700px){
@@ -127,7 +135,7 @@ hr{
 
 @media screen and (min-width: 800px){
   .wrapper{
-    max-width: 1000px;
+    max-width: 1200px;
   }
 }
 
