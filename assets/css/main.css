@@ -163,6 +163,7 @@ a img:hover{
   padding: 0 10px;
 }
 .page-inner-featured{
+  margin: 30px auto;
   padding: 50px 20px;
   background-color: black;
   color: white;
