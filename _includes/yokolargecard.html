@@ -1,13 +1,13 @@
 <div class="clearfix">
   <a href="{{ include.post.url }}">
-  <div class="col-45">
+  <div class="col-45-100">
     {% if include.post.image %}
     <img src="{{ include.post.image }}" alt="{{ include.post.title }}">
     {% else %}
     <img src="/assets/images/iwananotebook.png" alt="{{ include.post.title }}">
     {% endif %}
   </div>
-  <div class="col-55">
+  <div class="col-55-100">
     <h3 class="card-y-title">{{ include.post.title }}</h3>
     {% if include.description == true %}
     <p>{{ include.post.description }}</p>

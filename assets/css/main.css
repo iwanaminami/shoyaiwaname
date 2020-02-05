@@ -153,6 +153,12 @@ a img:hover{
   width: calc(100% - 300px);
   background-color: #ffffff;
 }
+@media (max-width: 800px) {
+  .page-wrapper{
+    float: none;
+    width: 100%;
+  }
+}
 .page-inner{
   padding: 0 10px;
 }
@@ -211,20 +217,30 @@ a img:hover{
   width: calc(60% - 20px);
   float: left;
 }
-.col-55{
+.col-55-100{
   padding: 10px;
   width: calc(55% - 20px);
   float: left;
+}
+@media (max-width: 800px) {
+  .col-55-100{
+    width: calc(100% - 20px);
+  }
 }
 .col-50{
   padding: 10px;
   width: calc(50% - 20px);
   float: left;
 }
-.col-45{
+.col-45-100{
   padding: 10px;
   width: calc(45% - 20px);
   float: left;
+}
+@media (max-width: 800px) {
+  .col-45-100{
+    width: calc(100% - 20px);
+  }
 }
 .col-40{
   padding: 10px;
