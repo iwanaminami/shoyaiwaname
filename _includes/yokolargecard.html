@@ -1,0 +1,22 @@
+<div class="clearfix">
+  <a href="{{ include.post.url }}">
+  <div class="col-45">
+    {% if include.post.image %}
+    <img src="{{ include.post.image }}" alt="{{ include.post.title }}">
+    {% else %}
+    <img src="/assets/images/iwananotebook.png" alt="{{ include.post.title }}">
+    {% endif %}
+  </div>
+  <div class="col-55">
+    <h3 class="card-y-title">{{ include.post.title }}</h3>
+    {% if include.description == true %}
+    <p>{{ include.post.description }}</p>
+    {% endif %}
+    {% if include.post.last_modified_at %}
+    <p class="card-y-date">{{ include.post.last_modified_at | date:"%Y年%-m月%-d日" }}</p>
+    {% else %}
+    <p class="card-y-date">{{ include.post.date | date:"%Y年%-m月%-d日" }}</p>
+    {% endif %}
+  </div>
+  </a>
+</div>

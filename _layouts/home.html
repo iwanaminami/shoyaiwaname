@@ -2,39 +2,62 @@
 layout: default
 ---
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+{%- if page.title -%}
+  <h1 class="page-heading">{{ page.title }}</h1>
+{%- endif -%}
 
-  {{ content }}
+{{ content }}
 
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts limit:5 -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
+<div class="clearfix">
+  <div class="home page-wrapper">
+    {% for post in site.posts limit:1 %}
+    <div class="home_top_post">
+      <div class="home_top_post_title">
+        <a href="{{ post.title | relative_url }}">
+          <h2>{{ post.title }}</h2>
+        </a>
+        <p>{{ post.date | date:"%Y年%-m月%-d日" }}</p>
+      </div>
+      <div class="">
+        <a href="{{ post.title | relative_url }}">
+          {% if post.image %}<img src="{{ post.image }}" alt="{{ post.title }}">{% else %}<img src="/assets/images/iwananotebook.png" alt="{{ post.title }}">{% endif %}
+        </a>
+      </div>
+    </div>
+    {% endfor %}
 
-    <p class="feed-subscribe">
-      <a href="{{ 'feed.xml' | relative_url }}">
-        <svg class="svg-icon orange"><use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use></svg><span>Subscribe</span>
-      </a>
-    </p>
-  {%- endif -%}
+    <div class="page-inner">
+      {%- if site.posts.size > 0 -%}
+      <h2 class="post-list-heading">{{ page.list_title | default: "RECENT" }}</h2>
+      <div class="clearfix">
+        {%- for post in site.posts limit:8 -%}
+        <div class="col-25-50">
+        {% include smallcard.html post = post %}
+        </div>
+        {%- endfor -%}
+      </div>
+      <h3><a href="/postlist/">Next ></a></h3>
+      {%- endif -%}
+      {% include inpostads.html %}
+    </div>
+    <div class="page-inner-featured">
+      <h2 class="post-list-heading">{{ page.list_title | default: "- FEATURED -" }}</h2>
+      {% assign loop = site.tags.googleform %}
+      {% for post in loop limit:3 %}
+      {% include yokolargecard.html post = post %}
+      {% endfor %}
+    </div>
+    <div class="page-inner">
+      {% include inpostads.html %}
+    </div>
 
-  <a href="/postlist/">過去の投稿一覧</a>
 
+
+
+  </div>
+  <div class="side-wrapper">
+    <div class="side-inner">
+      {% include side.html %}
+    </div>
+  </div>
 </div>

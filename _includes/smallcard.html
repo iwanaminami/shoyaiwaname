@@ -1,0 +1,17 @@
+<div class="card-sm">
+  <a href="{{ include.post.url }}">
+    {% if include.post.image %}
+    <img src="{{ include.post.image }}" alt="{{ include.post.title }}">
+    {% else %}
+    <img src="/assets/images/iwananotebook.png" alt="{{ include.post.title }}">
+    {% endif %}
+  </a>
+  <a href="{{ include.post.url }}">
+    <strong><p class="card-sm-title">{{ include.post.title }}</p></strong>
+  </a>
+  {% if include.post.last_modified_at %}
+  <p class="card-sm-date">{{ include.post.last_modified_at | date:"%Y年%-m月%-d日" }}</p>
+  {% else %}
+  <p class="card-sm-date">{{ include.post.date | date:"%Y年%-m月%-d日" }}</p>
+  {% endif %}
+</div>
