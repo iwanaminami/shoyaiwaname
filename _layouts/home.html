@@ -13,7 +13,7 @@ layout: default
     {% for post in site.posts limit:1 %}
     <div class="home_top_post">
       <div class="home_top_post_title">
-        <a href="{{ post.title | relative_url }}">
+        <a href="{{ post.url | relative_url }}">
           <h2>{{ post.title }}</h2>
         </a>
         <p>{{ post.date | date:"%Y年%-m月%-d日" }}</p>
