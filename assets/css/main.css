@@ -6,7 +6,7 @@ body{
 }
 
 p{
-  font-size: 16px;
+  font-size: 1rem;
 
 }
 
@@ -15,16 +15,21 @@ h1, h2, h3, h4, h5, h6{
 }
 
 h1{
-  font-size: 44px;
+  font-size: 2.5rem;
 }
 
 h2{
-  font-size: 40px;
+  font-size: 2rem;
   margin-top: 70px;
+}
+@media (max-width: 800px) {
+  h2{
+    font-size: 1.8rem;
+  }
 }
 
 h3{
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 hr{
@@ -45,6 +50,14 @@ a:hover{
 a img:hover{
   opacity: .5;
   transition: .5s;
+}
+
+code{
+  background-color: #dddddd;
+}
+
+.site-nav{
+  background-color: transparent;
 }
 
 .site-title{
@@ -89,6 +102,7 @@ a img:hover{
   margin-bottom: 30px;
   padding: 0;
   font-size: 24px;
+  font-weight: bold;
   /*background-color: #f0f8ff;
   border-bottom: solid 2px #4169e1;
   border-top: solid 2px #eeeeee;*/
@@ -123,14 +137,15 @@ a img:hover{
   margin-bottom: 30px;
   position: relative;
   font-size: 20px;
+  font-weight: bold;
 }
 
 .post h3:after {
   position: absolute;
   content: " ";
   display: block;
-  border-bottom: solid 1px #5472cd;
-  bottom: -3px;
+  border-top: solid 4px #5472cd;
+  top: -10px;
   width: 10%;
 }
 
@@ -144,7 +159,7 @@ a img:hover{
 
 @media screen and (min-width: 800px){
   .wrapper{
-    max-width: 1200px;
+    max-width: 1000px;
   }
 }
 
@@ -233,6 +248,15 @@ a img:hover{
   width: calc(50% - 20px);
   float: left;
 }
+.col-50-50-100{
+  width: 50%;
+  float: left;
+}
+@media (max-width: 1000px) {
+  .col-50-50-100{
+    width: 100%;
+  }
+}
 .col-45-100{
   padding: 10px;
   width: calc(45% - 20px);
@@ -319,6 +343,16 @@ p.card-y-date{
 .home .post-list-heading{
   text-align: center;
 }
+
+.footer-heading{
+  margin: 0 10px 10px 0px;
+}
+
+.highlighter-rouge .highlight{
+  background-color: #dddddd;
+}
+
+
 
 
 .clearfix::after {
