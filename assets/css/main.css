@@ -324,6 +324,26 @@ p.card-y-date{
   color: #999999;
 }
 
+p.card-y-host{
+  color: gray;
+  padding-left: 10px;
+  position: relative;
+}
+
+p.card-y-host:after{
+  content: "";
+  display: block;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  border-top: solid 1px;
+  border-right: solid 1px;
+  transform: rotate(45deg) translateY(-50%);
+  color: gray;
+}
+
 .card-y a:hover p{
   color: #4169e1;
 }

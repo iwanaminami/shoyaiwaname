@@ -4,7 +4,7 @@
       {% assign tid = include.url | remove: "https://" | remove: "http://" | remove: "." | remove: "/" | remove: "-" | remove: "_" | remove: "?" | remove: "%" %}
       <p class="{% unless include.title %}{{ tid }}title{% endunless %} card-y-title">{% if include.title %}{{ include.title }}{% endif %}</p>
       <p class="{% unless include.title %}{{ tid }}description{% endunless %} card-y-description"></p>
-      <p class="{% unless include.title %}{{ tid }}host{% endunless %} card-y-description">{% if include.title %}{{ include.url }}{% endif %}</p>
+      <p class="{% unless include.title %}{{ tid }}host{% endunless %} card-y-description card-y-host">{% if include.title %}{{ include.url }}{% endif %}</p>
       <img src="https://www.google.com/s2/favicons?domain={{ include.url }}" alt="">
     </div>
   </a>
