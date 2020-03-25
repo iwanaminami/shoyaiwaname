@@ -326,6 +326,8 @@ p.card-y-date{
 
 p.card-y-host{
   color: gray;
+  font-weight: bold;
+  font-style: italic;
   padding-left: 10px;
   position: relative;
 }
@@ -346,6 +348,10 @@ p.card-y-host:after{
 
 .card-y a:hover p{
   color: #4169e1;
+}
+
+.card-sm-title{
+  font-size: 0.8rem;
 }
 
 .home_top_post h2{
