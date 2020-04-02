@@ -1,7 +1,7 @@
 
 body{
   background-color: #f9f9f9;
-  font-family: YuGothic, Helvetica, sans-serif;
+  font-family: "Avenir Next", Helvetica, Arial, "Hiragino Kaku Gothic ProN", YuGothic, sans-serif;
   color: black;
 }
 
@@ -11,7 +11,7 @@ p{
 }
 
 h1, h2, h3, h4, h5, h6{
-  font-family: "Century Gothic", YuGothic, sans-serif;
+  font-family: "Century Gothic", "Hiragino Kaku Gothic ProN", YuGothic, sans-serif;
 }
 
 h1{
