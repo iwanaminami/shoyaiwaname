@@ -380,6 +380,7 @@ p.card-y-host:after{
 
 .inpostads_container{
   padding: 10px;
+  width: calc(100% - 20px);
   background-color: #ddeeff;
 }
 
