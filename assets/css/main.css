@@ -378,7 +378,10 @@ p.card-y-host:after{
   background-color: #dddddd;
 }
 
-
+.inpostads_container{
+  padding: 10px;
+  background-color: #ddeeff;
+}
 
 
 .clearfix::after {
