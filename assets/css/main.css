@@ -94,22 +94,72 @@ table tr:nth-child(even){
   font-size: 40px;
 }
 
+.post-header-tag a{
+  color: #4169e1;
+  font-weight: bold;
+}
+
+.post-header-tag{
+  margin: 0;
+  font-size: 24px;
+}
+
+.post-content-tags{
+  font-size: 12px;
+  padding: 10px 0;
+}
+
+.post-content-tags a{
+  padding: 5px 20px;
+  margin-right: 10px;
+  background-color: #4169e1;
+  color: white;
+}
+
 .post-title{
   line-height: normal;
 }
 
+.post-share-top{
+  margin: 20px 0;
+  padding: 10px 0;
+  border-top: gray 1px solid;
+  border-bottom: gray 1px solid;
+}
+
+.post-share-top p{
+  margin: 0;
+  vertical-align: middle;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0 15px 0 10px;
+}
+
+.post-share-top a{
+  font-size: 40px;
+  vertical-align: middle;
+  color: #4169e1;
+  padding: 0 5px;
+}
+
+.post-share-top a:hover{
+  color: #4169e1cc;
+  transition: .5s;
+}
+
 .post h1{
-  font-size: 28px;
-  padding: 24px;
-  background-color: #4169e1cc;
-  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 10px 0 10px 0;
+  margin: 0;
+  color: #000000;
   text-align: justify;
 }
 
 @media (max-width: 700px){
   .post h1{
     font-size: 30px;
-    padding: 15px;
+    padding: 15px 0;
   }
 }
 

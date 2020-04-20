@@ -24,7 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   知識は浅く広く、実践から学ぶ。知のオープンアクセス化。日々困ったこと調べたこと誰かの役に立ちそうなことを備忘録的に残していきます。
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://shoyaiwana.me" # the base hostname & protocol for your site, e.g. http://example.com
-# twitter_username: jekyllrb
+twitter_username: iwana_me
 # github_username:  jekyll
 google_analytics: UA-85165915-13
 

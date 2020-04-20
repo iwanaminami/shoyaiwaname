@@ -6,6 +6,11 @@ layout: default
   <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
     <header class="post-header">
+      {% if page.tags %}
+      <p class="post-header-tag">
+        <a href="/tags/#{{ tag }}">{{ page.tags.first }}</a>
+      </p>
+      {% endif %}
       <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
       <p class="post-meta">
         Posted:
@@ -23,11 +28,26 @@ layout: default
         {%- if page.author -%}
           • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author | escape }}</span></span>
         {%- endif -%}</p>
+        {% include inpostads.html %}
+
+        {% include postshare.html %}
+
+        {% if page.tags %}
+        <div>
+          <p class="post-content-tags">
+            {% for tag in page.tags %}
+            <a href="/tags/#{{ tag }}">{{ tag }}</a>
+            {% endfor %}
+          </p>
+        </div>
+        {% endif %}
     </header>
 
     <div class="post-content e-content" itemprop="articleBody">
       {{ content }}
     </div>
+
+    {% include postshare.html %}
 
     {% if page.tags %}
     <div class="">
