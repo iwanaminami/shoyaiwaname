@@ -72,7 +72,13 @@ layout: default
   <div class="">
     {% include postnp.html %}
 
-    {% if page.tags %}
+    {% assign related = 0 %}
+    {% for tag in page.tags %}
+      {% if site.tags[tag].size > 1 %}
+        {% assign related = 1 %}
+      {% endif %}
+    {% endfor %}
+    {% if related == 1 %}
       {% include related.html %}
     {% endif %}
   </div>

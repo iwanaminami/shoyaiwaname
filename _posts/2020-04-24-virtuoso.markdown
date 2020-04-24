@@ -1,0 +1,102 @@
+---
+layout: post
+title:  "MacでCORSAIR VIRTUOSO RGB WIRELESS SEのアップデートが失敗する"
+description: VIRTUOSO WIRELESS SEのアップデートがあると通知が来るのに、アップデートしようとすると、警告と出てきて「アップデート失敗」と表示される。
+date:   2020-04-24 09:00:00 +0900
+last_modified_at: 2020-04-24 09:00:00 +0900
+tags:
+- VIRTUOSO
+- CORSAIR
+- headset
+- Mac
+
+categories:
+image: /assets/images/20200424/cover.png
+---
+
+
+
+CORSAIRのPC周辺機器管理ツールであるiCUE
+
+{% include cardblank.html url = "https://www.corsair.com/ja/ja/icue" %}
+
+VIRTUOSO WIRELESS SEのアップデートがあると通知が来るのに、アップデートしようとすると、警告と出てきて「アップデート失敗」と表示される。
+
+再起動やアプリの再インストールなどを試してもダメ。
+
+## 環境
+
+15インチMacBook Pro (2017)
+
+macOS Catalina 10.15.4
+
+iCUEのバージョン： 不明 → 3.28.70
+
+VIRTUOSO WIRELESS SEのファームフェア： 不明 → 0.17.149
+
+ドングル（レシーバー）ファームウェア： 不明 → 0.16.80
+
+{% include inpostads.html %}
+
+## そもそもiCUEアプリのアップデートもできない
+
+「iCUEUninstallerが予期しない・・・で終了しました。」とAppleのレポートが表示される。
+
+アンインストーラに不具合があってアップデートができない模様。
+
+CORSAIRのダウンロードページから最新版のインストーラをダウンロードして、新たにインストールことでアップデートができた。
+
+{% include cardblank.html url = "https://www.corsair.com/ja/ja/downloads" %}
+
+CORSAIR iCUE vX.XX.XXの最新バージョンの対応するOS用のインストーラを探して、ダウンロード。
+
+## iCUEアプリのアップデートをしても解決せず
+
+iCUEのバージョンを最新の3.28.70にしてもVIRTUOSO WIRELESS SEのアップデートは失敗。
+
+OSのアップデートも確認するも最新版。
+
+この環境では打つ手がなくなった。
+
+
+## WindowsでVIRTUOSO WIRELESS SEとドングルのファームウェアをアップデート
+
+Windows10のラップトップにiCUEを入れ、VIRTUOSO WIRELESS SEをUSB経由で接続すると、すんなりとアップデートが行えた。
+
+最新版の状態で「更新するボタン」を押すと、「強制アップデート」と「ファームウェアイメージ」という選択肢が出てきて更新するボタンが隣にあるが、最新バージョンのファームウェアが入っているので、何もする必要はないがわかりにくい。
+
+Macと比較するとWindows版のiCUEの方が機能が多そう。
+
+VIRTUOSO WIRELESS SEだけをアップデートしてMacに接続すると、まだアップデートが残っている様子。
+
+さっきまで緑に光っていたマイクの先端がなぜかオンでもオフでも赤色に光っている。
+
+VIRTUOSO WIRELESS SE本体だけではなくドングル（USB接続の無線用レシーバー）のファームウェアアップデートが必要。
+
+ドングルのアップデートもMacではできず、Windowsラップトップに接続してアップデート。
+
+ドングルは単体でアップデートが可能（VIRTUOSO WIRELESS SE本体の接続は不要）。
+
+アップデートしたドングルと一緒にMacに接続すると、更新の通知がなくなり、マイクの先端もオンの時に緑に光るようになった。
+
+{% include inpostads.html %}
+
+## Macでアップデートできない原因
+
+Mac版のiCUEはよくわからない権限を要求してくるし、インストール時に再起動が必要という謎仕様。
+
+基本は自作PC勢やゲーマー勢のWindowsユーザーを優先しているのだろうけど、Macとキーボードやマウスの組み合わせのプロモーションページも作っているんだから、iCUEアプリを安定させて欲しいところ。
+
+{% include cardblank.html url = "https://www.corsair.com/ja/ja/icue-mac" %}
+
+iCUEアプリ本体のアップデートでもアンインストーラにバグがあることから、少し前のmacOSから厳しくなった、アクセス権限の問題でうまくいっていないのかもしれない。
+
+ファームウェアのバージョンをアップデートしなくても、ヘッドセットとしての基本性能は使えていたので問題はなかったが、最新版のファームウェアが使えないのは気持ち悪い。
+
+## まとめ
+
+- CORSAIR VIRTUOSO WIRELESS SEのアップデートはWindowsで
+- ドングルのアップデートも必要
+- iCUEアプリ本体は最新版のインストーラからインストールしてアップデート
+
+{% include inpostads.html %}
