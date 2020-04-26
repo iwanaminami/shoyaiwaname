@@ -1,90 +1,92 @@
 ---
 layout: default
 ---
+<div class="wrapper two_culumn_container">
+  <div class="post-wrapper">
+    <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-<div class="post-wrapper">
-  <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-
-    <header class="post-header">
-      {% if page.tags %}
-      <p class="post-header-tag">
-        <a href="/tags/#{{ tag }}">{{ page.tags.first }}</a>
-      </p>
-      {% endif %}
-      <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-      <p class="post-meta">
-        Posted:
-        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-          {{ page.date | date: date_format }}
-        </time>
-        {% if page.last_modified_at %}
-        | Updated:
-        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-          {{ page.last_modified_at | date: date_format }}
-        </time>
-        {% endif %}
-        {%- if page.author -%}
-          • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author | escape }}</span></span>
-        {%- endif -%}</p>
-        {% include inpostads.html %}
-
-        {% include postshare.html %}
-
+      <header class="post-header">
         {% if page.tags %}
-        <div>
-          <p class="post-content-tags">
-            {% for tag in page.tags %}
-            <a href="/tags/#{{ tag }}">{{ tag }}</a>
-            {% endfor %}
-          </p>
-        </div>
+        <p class="post-header-tag">
+          <a href="/tags/#{{ tag }}">{{ page.tags.first }}</a>
+        </p>
         {% endif %}
-    </header>
+        <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+        <p class="post-meta">
+          Posted:
+          <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            {{ page.date | date: date_format }}
+          </time>
+          {% if page.last_modified_at %}
+          | Updated:
+          <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            {{ page.last_modified_at | date: date_format }}
+          </time>
+          {% endif %}
+          {%- if page.author -%}
+            • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author | escape }}</span></span>
+          {%- endif -%}</p>
+          {% include inpostads.html %}
 
-    <div class="post-content e-content" itemprop="articleBody">
-      {{ content }}
-    </div>
+          {% include postshare.html %}
 
-    {% include postshare.html %}
+          {% if page.tags %}
+          <div>
+            <p class="post-content-tags">
+              {% for tag in page.tags %}
+              <a href="/tags/#{{ tag }}">{{ tag }}</a>
+              {% endfor %}
+            </p>
+          </div>
+          {% endif %}
+      </header>
 
-    {% if page.tags %}
+      <div class="post-content e-content" itemprop="articleBody">
+        {{ content }}
+      </div>
+
+      {% include postshare.html %}
+
+      {% if page.tags %}
+      <div class="">
+        <p>Tags:
+        {% for tag in page.tags %}
+        {% if forloop.last != true %}
+        <i><a href="/tags/#{{ tag }}">#{{ tag }}</a></i>,
+        {% else %}
+        <i><a href="/tags/#{{ tag }}">#{{ tag }}</a></i>
+        {% endif %}
+        {% endfor %}
+        </p>
+      </div>
+      {% endif %}
+
+      {%- if site.disqus.shortname -%}
+        {%- include disqus_comments.html -%}
+      {%- endif -%}
+
+      <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+    </article>
     <div class="">
-      <p>Tags:
+      {% include postnp.html %}
+
+      {% assign related = 0 %}
       {% for tag in page.tags %}
-      {% if forloop.last != true %}
-      <i><a href="/tags/#{{ tag }}">#{{ tag }}</a></i>,
-      {% else %}
-      <i><a href="/tags/#{{ tag }}">#{{ tag }}</a></i>
-      {% endif %}
+        {% if site.tags[tag].size > 1 %}
+          {% assign related = 1 %}
+        {% endif %}
       {% endfor %}
-      </p>
-    </div>
-    {% endif %}
-
-    {%- if site.disqus.shortname -%}
-      {%- include disqus_comments.html -%}
-    {%- endif -%}
-
-    <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-  </article>
-  <div class="">
-    {% include postnp.html %}
-
-    {% assign related = 0 %}
-    {% for tag in page.tags %}
-      {% if site.tags[tag].size > 1 %}
-        {% assign related = 1 %}
+      {% if related == 1 %}
+        {% include related.html %}
       {% endif %}
-    {% endfor %}
-    {% if related == 1 %}
-      {% include related.html %}
-    {% endif %}
+    </div>
   </div>
-</div>
-<div class="side-wrapper">
-  <div class="side-inner">
-    {% include side.html %}
+  <div class="side-wrapper">
+    <div class="side-inner">
+      {% include side.html %}
+    </div>
   </div>
+
 </div>

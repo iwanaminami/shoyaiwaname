@@ -166,25 +166,16 @@ table tr:nth-child(even){
 .post h2{
   margin-top: 100px;
   margin-bottom: 30px;
-  padding: 0;
+  padding: 0 0 0 10px;
   font-size: 24px;
   font-weight: bold;
+  border-left: solid 5px #000000;
   /*background-color: #f0f8ff;
   border-bottom: solid 2px #4169e1;
   border-top: solid 2px #eeeeee;*/
 }
 
-.post h2:before {
-  content: '';
-  display: inline-block;
-  width: 70px;
-  height: 70px;
-  background-image: url(/assets/images/iwana.png);
-  background-size: contain;
-  vertical-align: middle;
-  background-position: left;
-  background-repeat: no-repeat;
-}
+
 
 .page-heading::before {
   content: '';
@@ -211,7 +202,7 @@ table tr:nth-child(even){
   content: " ";
   display: block;
   border-top: solid 4px #5472cd;
-  top: -10px;
+  bottom: -5px;
   width: 10%;
 }
 
@@ -227,6 +218,14 @@ table tr:nth-child(even){
   .wrapper{
     max-width: 1200px;
   }
+}
+
+.two_culumn_container{
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding-top: 50px;
 }
 
 .page-wrapper{
@@ -267,12 +266,10 @@ table tr:nth-child(even){
 
 
 .post-wrapper{
-  float: left;
   width: calc(100% - 300px);
 }
 .side-wrapper{
   display: block;
-  float: left;
   width: 300px;
 }
 @media (max-width: 800px) {
@@ -287,6 +284,7 @@ table tr:nth-child(even){
 
 .side-inner{
   padding: 0 20px;
+  height: 100%;
 }
 
 .col-70{
@@ -362,6 +360,7 @@ table tr:nth-child(even){
   border: solid 1px #dddddd;
   margin: 20px 0;
   padding: 10px;
+  border-radius: 10px;
 }
 
 p.card-y-title{
@@ -390,27 +389,22 @@ p.card-y-date{
   color: #999999;
 }
 
-p.card-y-host{
-  color: gray;
-  font-weight: bold;
-  font-style: italic;
-  padding-left: 10px;
-  position: relative;
+img.card-y-favicon{
+  float: left;
 }
 
-p.card-y-host:after{
-  content: "";
-  display: block;
-  width: 3px;
-  height: 3px;
-  position: absolute;
-  top: 50%;
-  left: 0px;
-  border-top: solid 1px;
-  border-right: solid 1px;
-  transform: rotate(45deg) translateY(-50%);
+p.card-y-host{
   color: gray;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.2;
+  font-weight: bold;
+  padding-left: 5px;
+  position: relative;
+  float: left;
 }
+
+
 
 .card-y a:hover p{
   color: #4169e1;
@@ -450,6 +444,11 @@ p.card-y-host:after{
   background-color: #ddeeff;
 }
 
+.sideads_sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
+}
 
 .clearfix::after {
   content: "";

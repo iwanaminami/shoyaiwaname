@@ -9,8 +9,11 @@
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        {{ content }}
+        <div class="inpostads_container">
+          {% include inpostads.html %}
+        </div>
       </div>
+      {{ content }}
     </main>
 
     <div class="wrapper">

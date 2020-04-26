@@ -1,5 +1,15 @@
 <div class="">
-  {% include displayads.html %}
+  <div class="inpostads_container">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- iwanaサイド固定 -->
+    <ins class="adsbygoogle"
+     style="display:inline-block;width:240px;height:600px"
+     data-ad-client="ca-pub-6368943295713902"
+     data-ad-slot="8202343634"></ins>
+    <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
   <h3>最近の記事</h3>
   {% for post in site.posts limit:4 %}
   <a href="{{ post.url }}">
@@ -7,5 +17,15 @@
   </a>
   {% endfor %}
   {% include taglist.html %}
-  {% include displayads.html %}
+</div>
+<div class="inpostads_container sideads_sticky">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- iwanaサイド固定 -->
+  <ins class="adsbygoogle"
+   style="display:inline-block;width:240px;height:600px"
+   data-ad-client="ca-pub-6368943295713902"
+   data-ad-slot="8202343634"></ins>
+  <script>
+   (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
 </div>

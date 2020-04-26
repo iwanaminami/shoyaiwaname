@@ -2,13 +2,16 @@
 layout: default
 ---
 
-{%- if page.title -%}
-  <h1 class="page-heading">{{ page.title }}</h1>
-{%- endif -%}
+<div class="wrapper">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
 
-{{ content }}
+  {{ content }}
+</div>
 
-<div class="clearfix">
+
+<div class="wrapper two_culumn_container">
   <div class="home page-wrapper">
     {% for post in site.posts limit:1 %}
     <div class="home_top_post">
