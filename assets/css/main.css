@@ -356,11 +356,20 @@ table tr:nth-child(even){
   }
 }
 
+.yokolargecard_image{
+  max-width: 300px;
+}
+
 .card-y{
   border: solid 1px #dddddd;
   margin: 20px 0;
   padding: 10px;
   border-radius: 10px;
+}
+
+h3.card-y-title{
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 p.card-y-title{
@@ -438,10 +447,28 @@ p.card-y-host{
   background-color: #dddddd;
 }
 
+.headerads_container{
+  margin: auto;
+  width: 60%;
+  background-color: #ddeeff;
+}
+
+@media (max-width: 800px) {
+  .headerads_container{
+    display: none;
+  }
+}
+
 .inpostads_container{
   padding: 10px;
+  margin: 10px 0;
   width: calc(100% - 20px);
   background-color: #ddeeff;
+}
+
+.side_post_recent{
+  border-top: solid #999999 1px;
+  padding-top: 10px;
 }
 
 .sideads_sticky {

@@ -7,7 +7,7 @@
 
     {% for tag in tagarray %}
     {% assign tag0 = tag %}
-    <a href="/tags/#{{ tag0 }}">#{{ tag0 }} ({{ site.tags[tag0].size }})</a>
+    <a href="/tags/#{{ tag0 }}"><strong>#{{ tag0 }}</strong> ({{ site.tags[tag0].size }})</a>
     {% endfor %}
   </p>
 </div>

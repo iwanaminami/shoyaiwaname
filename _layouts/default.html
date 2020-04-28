@@ -9,15 +9,16 @@
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="inpostads_container">
-          {% include displayads.html %}
+        <div class="headerads_container">
+          {% include inpostads.html %}
         </div>
       </div>
       {{ content }}
     </main>
 
     <div class="wrapper">
-      {% include recommend.html %}
+      {% include recommend.html tag = "googleform" %}
+      {% include recommend.html tag = "sfc" %}
     </div>
 
 

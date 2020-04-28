@@ -1,6 +1,8 @@
+{% assign inctag = include.tag %}
+
 <div class="">
   <h2>RECOMMENDED</h2>
-  {% assign loop = site.tags.sfc %}
+  {% assign loop = site.tags[inctag] %}
   {% for post in loop limit:3 %}
   {% include yokolargecard.html post = post description = true %}
   {% endfor %}
