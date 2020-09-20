@@ -1,0 +1,80 @@
+---
+layout: post
+title:  "空間オーディオが効かない？iOS14でのAirPodsのアップデートと注意点など"
+description: iOS14へのアップデートで対応したAirPodsの自動切り替えと空間オーディオについて使ってみた感想とよくわからない点などのまとめ
+date:   2020-09-20 09:00:00 +0900
+last_modified_at: 2020-09-20 09:00:00 +0900
+tags:
+- AirPods
+- Apple
+- iOS
+
+categories:
+image: /assets/images/20200920/cover.png
+---
+
+
+AirPodsをAmazonでみる：[https://amzn.to/3kwdTUk](https://amzn.to/3kwdTUk)
+
+### WWDC2020でAirPods向けに発表されたアップデートは以下の２つ
+
+WWDC2020
+
+{% include cardblank.html url = "https://developer.apple.com/wwdc20/" %}
+
+
+- iPhone, iPad, Macとの接続の自動切り替え
+- 空間オーディオ（Spatial Audio）
+
+iOS14へのアップデートでこれらに対応した。Macはまだっぽい。
+
+{% include cardblank.html url = "https://support.apple.com/ja-jp/HT211808" %}
+
+
+自動切り替えについては、これまでも比較的簡単に切り替えることができていたが、別のデバイスでAirPodsに接続するボタンを押すステップが１つ減る感じ。
+
+世間の注目は空間オーディオで、AirPods Proの価値が上がって品切れも予想されたが、そこまでではない模様。
+
+{% include inpostads.html %}
+
+
+## AirPodsの自動切り替え
+
+今使っている機器１台に加えて、直近で使用した機器に同時接続して待機している。
+同時接続した状態の機器で音声を再生するなどすると自動でAirPodsの音声が切り替わる。
+例えば、iPhone１台とiPad２台が手元にある場合、使用していない２台のうちの１台のみが自動切り替えの対象で、もう１台は自動では切り替わらない。切り替えたい方のデバイスを少し操作しているとAirPodsの接続先が切り替わり、自動切り替えの対象になる。
+
+電話の場合は優先されるかはわからない
+
+MacOS 10.15.6 Catalinaは対応していない？
+
+AirPods（第一世代）では機能しない。
+
+
+## 空間オーディオ（Spatial Audio）
+
+設定やアイコンの説明など
+
+{% include cardblank.html url = "https://support.apple.com/ja-jp/HT211775" %}
+
+5.1ch/7.1chとDolby Atomsの音源のサラウンドサウンドを再現性高く再生する機能と頭の動きをトラッキングする事による音の位置の固定する機能（ダイナミックヘッドトラッキング）により実現される「臨場感あふれるサラウンド体験」
+
+YouTubeやPrime Videoなどでは機能せず、Apple TVアプリ上の動画のみが対応している模様。Safariでの動画再生も対応せず。
+
+ダイナミックヘッドトラッキングは、感動するくらい、デバイスから音が出ているかのように聞くことができる。
+
+{% include inpostads.html %}
+
+### 気になる点
+
+Apple TVのコンテンツで、かつ、Dolby Atmos対応のものでも、コントロールセンターから空間オーディオをオンにした時に、「このコンテンツは空間オーディオに対応していません」と表示される。
+
+コントロールセンターのアイコンは空間オーディオがアクティブになっていることがちゃんと表示されているので、問題ない模様。
+
+Apple TVのコンテンツであれば全てダイナミックヘッドトラッキングは利用できるので、かなりいい。
+
+空間オーディオは基本オンでいいと思うけど、iPadやiPhoneを横に置いてながら見をするときなどは、頭が向いている方向から音がすることになるので少し違和感がある。
+
+AirPodsをAmazonでみる：[https://amzn.to/3kwdTUk](https://amzn.to/3kwdTUk)
+
+{% include inpostads.html %}
