@@ -19,15 +19,38 @@
   </div>
   {% endfor %}
   {% include taglist.html %}
+
 </div>
-<div class="inpostads_container sideads_sticky">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <!-- iwanaサイド固定 -->
-  <ins class="adsbygoogle"
-   style="display:inline-block;width:240px;height:600px"
-   data-ad-client="ca-pub-6368943295713902"
-   data-ad-slot="8202343634"></ins>
-  <script>
-   (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
+<!-- fixed -->
+<div class="sideads_sticky">
+  <div class="">
+    <h3>関連商品を探す</h3>
+    <p><a href="https://amzn.to/3jg0mA3" target="_blank" rel="noopener noreferrer"><strong>Amazon</strong></a></p>
+    <h3>おすすめ</h3>
+    <p>
+      <ul>
+        {% if page.items %}
+        {% for amazon in page.items %}
+        <li><a href="{{ amazon.url }}" target="_blank" rel="noopener noreferrer"><strong>{{ amazon.name }}</strong></a></li>
+        {% endfor %}
+        {% else %}
+        {% for amazon in site.data.amazon.side %}
+        <li><a href="{{ amazon.url }}" target="_blank" rel="noopener noreferrer"><strong>{{ amazon.name }}</strong></a></li>
+        {% endfor %}
+        {% endif %}
+      </ul>
+    </p>
+  </div>
+  <div class="inpostads_container">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- iwanaサイド固定 -->
+    <ins class="adsbygoogle"
+     style="display:inline-block;width:240px;height:600px"
+     data-ad-client="ca-pub-6368943295713902"
+     data-ad-slot="8202343634"></ins>
+    <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
 </div>

@@ -14,6 +14,17 @@ image: /assets/images/iwananotebook.png
 - 当サイトに掲載した情報については、管理者が可能な限りはテスト等を行っていますが、このサイトの情報により発生した不具合・損失等については一切責任を持ちませんので、情報の利用は自己責任にてお願いします。  
 - 転載については以下の問い合わせフォームから許可を得た上で行ってください。
 
+### 外部ツールの使用
+
+- Google Analytics
+- Google Search Console
+- Google Adsense
+- Amazonアソシエイト
+
+- JavaScript
+- Google App Script
+
+
 ### その他
 
 間違い等がありましたら指摘いただけると嬉しいです。

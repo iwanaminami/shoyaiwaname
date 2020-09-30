@@ -9,6 +9,16 @@ tags:
 - Apple
 - iOS
 
+items:
+  - name: AirPods
+    url: https://amzn.to/3kwdTUk
+  - name: iPad
+    url: https://amzn.to/3jgQoOV
+  - name: AirPods Proケース
+    url: https://amzn.to/3n04R3Y
+  - name: iPhoneケース
+    url: https://amzn.to/30l5ATF
+
 categories:
 image: /assets/images/20200920/cover.png
 ---

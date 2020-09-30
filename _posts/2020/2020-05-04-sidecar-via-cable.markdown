@@ -10,6 +10,16 @@ tags:
 - Mac
 - Apple
 
+items:
+  - name: iPad
+    url: https://amzn.to/3jgQoOV
+  - name: AirPods
+    url: https://amzn.to/3kwdTUk
+  - name: AirPods Proケース
+    url: https://amzn.to/3n04R3Y
+  - name: iPhoneケース
+    url: https://amzn.to/30l5ATF
+
 categories:
 image: /assets/images/20200521/cover.png
 ---
