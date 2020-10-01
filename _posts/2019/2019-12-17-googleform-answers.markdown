@@ -5,6 +5,7 @@ description: 大切なアンケートの回答を消してしまわないよう�
 date:   2019-12-17 02:32:24 +0900
 tags:
 - googleform
+- Google
 categories:
 image: /assets/images/20191217/googleform.png
 ---

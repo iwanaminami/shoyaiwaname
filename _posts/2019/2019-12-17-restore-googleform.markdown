@@ -5,6 +5,7 @@ description: Googleフォームの回答が消えた時の削除した質問の�
 date:   2019-12-17 02:32:24 +0900
 tags:
 - googleform
+- Google
 categories:
 image: /assets/images/20191217/googleform.png
 ---

@@ -7,6 +7,7 @@ last_modified_at: 2020-03-03 09:00:00 +0900
 tags:
 - PWA
 - GoogleChrome
+- Google
 categories:
 image: /assets/images/20200304/01.png
 ---
