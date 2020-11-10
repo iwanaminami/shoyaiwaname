@@ -1,0 +1,15 @@
+
+{% for poppost in site.data.popularposts.side %}
+{% assign poppostid = poppost.url | remove: ".html" %}
+{% assign spposts = site.posts | where:"id", poppostid %}
+{% for sppost in spposts %}
+
+<div class="side_post_recent">
+  <a href="{{ sppost.url }}">
+    <p><strong>{{ sppost.title }}</strong></p>
+  </a>
+  <p><small><strong>{{ poppost.view }} views</strong> | {{ sppost.date | date: "%b %-d, %Y" }}</small></p>
+</div>
+{% endfor %}
+
+{% endfor %}
