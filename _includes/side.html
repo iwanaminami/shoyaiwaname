@@ -12,14 +12,6 @@
   </div>
   <h3>人気の記事</h3>
   {% include sidepopposts.html %}
-  <h3>最近の記事</h3>
-  {% for post in site.posts limit:5 %}
-  <div class="side_post_recent">
-    <a href="{{ post.url }}">
-      <p><strong>{{ post.title }}</strong></p>
-    </a>
-  </div>
-  {% endfor %}
 
 </div>
 <!-- fixed -->
@@ -28,19 +20,17 @@
     <h3>関連商品を探す</h3>
     <p><a href="https://amzn.to/3jg0mA3" target="_blank" rel="noopener noreferrer"><strong>Amazon</strong></a></p>
     <h3>おすすめ</h3>
-    <p>
-      <ul>
-        {% if page.items %}
-        {% for amazon in page.items %}
-        <li><a href="{{ amazon.url }}" target="_blank" rel="noopener noreferrer"><strong>{{ amazon.name }}</strong></a></li>
-        {% endfor %}
-        {% else %}
-        {% for amazon in site.data.amazon.side %}
-        <li><a href="{{ amazon.url }}" target="_blank" rel="noopener noreferrer"><strong>{{ amazon.name }}</strong></a></li>
-        {% endfor %}
-        {% endif %}
-      </ul>
-    </p>
+    {% if page.items %}
+    {% assign amazonitems = page.items %}
+    {% else %}
+    {% assign amazonitems = site.data.amazon.side %}
+    {% endif %}
+    {% for amazon in amazonitems %}
+    {% if amazon.image %}
+    {{ amazon.image }}
+    {% endif %}
+    <p><a href="{{ amazon.url }}" target="_blank" rel="noopener noreferrer"><strong>{{ amazon.name }}</strong></a></p>
+    {% endfor %}
   </div>
   <div class="inpostads_container">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -53,6 +43,14 @@
      (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
   </div>
+  <h3>最近の記事</h3>
+  {% for post in site.posts limit:5 %}
+  <div class="side_post_recent">
+    <a href="{{ post.url }}">
+      <p><strong>{{ post.title }}</strong></p>
+    </a>
+  </div>
+  {% endfor %}
   {% include taglist.html %}
 
 </div>
