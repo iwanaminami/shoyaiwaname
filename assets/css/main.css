@@ -72,6 +72,25 @@ table tr:nth-child(even){
   background-color: #ffffff;
 }
 
+/*Google adsense*/
+div#___gcse_0 div{
+  background-color: #ffffff00;
+  border: 0;
+}
+div#___gcse_0 table{
+  margin: 0;
+  border: 0;
+}
+div#___gcse_0 td{
+  border: 0;
+  padding: 0;
+}
+div#___gcse_0 td.gsc-input{
+  border: 1px solid #999999;
+  background-color: #ffffff;
+  padding-left: 20px;
+}
+
 .site-nav{
   background-color: transparent;
 }
