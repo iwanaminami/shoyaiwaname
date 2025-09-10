@@ -1,9 +1,9 @@
 side:
-  - view: 278
+  - view: 279
     url: "/2020/01/27/ex-rideontheway.html"
   - view: 104
     url: "/2020/01/23/sfc-judge.html"
-  - view: 92
+  - view: 93
     url: "/2020/10/01/googlepassword.html"
   - view: 75
     url: "/2019/12/16/restore-googleform.html"
@@ -12,6 +12,6 @@ side:
   - view: 35
     url: "/2020/04/14/4kcable.html"
   - view: 20
-    url: "/2021/05/09/gmailtocalendar.html"
-  - view: 19
     url: "/2019/12/16/googleform-answers.html"
+  - view: 20
+    url: "/2021/05/09/gmailtocalendar.html"
