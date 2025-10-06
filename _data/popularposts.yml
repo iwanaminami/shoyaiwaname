@@ -1,7 +1,7 @@
 side:
   - view: 315
     url: "/2020/01/27/ex-rideontheway.html"
-  - view: 128
+  - view: 129
     url: "/2019/12/16/restore-googleform.html"
   - view: 110
     url: "/2020/01/23/sfc-judge.html"
@@ -12,6 +12,6 @@ side:
   - view: 38
     url: "/2020/04/14/4kcable.html"
   - view: 20
-    url: "/2020/01/23/sfcgold.html"
-  - view: 19
     url: "/2019/12/16/googleform-answers.html"
+  - view: 20
+    url: "/2020/01/23/sfcgold.html"
