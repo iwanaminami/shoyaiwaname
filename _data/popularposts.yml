@@ -10,8 +10,8 @@ side:
   - view: 60
     url: "/2020/10/01/googlepassword.html"
   - view: 23
-    url: "/2020/04/14/4kcable.html"
-  - view: 22
     url: "/"
+  - view: 23
+    url: "/2020/04/14/4kcable.html"
   - view: 14
     url: "/2020/01/23/sfcgold.html"
