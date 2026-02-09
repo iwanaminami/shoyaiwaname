@@ -1,7 +1,7 @@
 side:
-  - view: 79
+  - view: 80
     url: "/2021/05/18/image-compression-word.html"
-  - view: 58
+  - view: 59
     url: "/2020/01/27/ex-rideontheway.html"
   - view: 47
     url: "/2019/12/16/restore-googleform.html"
@@ -12,6 +12,6 @@ side:
   - view: 12
     url: "/2019/12/16/googleform-answers.html"
   - view: 12
+    url: "/2020/04/14/4kcable.html"
+  - view: 12
     url: "/2021/05/09/gmailtocalendar.html"
-  - view: 11
-    url: "/"
